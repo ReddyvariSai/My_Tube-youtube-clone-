@@ -758,3 +758,8 @@ function changeGradientBg() {
 setInterval(changeGradientBg, 10000);
 window.addEventListener('DOMContentLoaded', changeGradientBg);
 
+
+
+
+![image](https://github.com/user-attachments/assets/2eb3694e-a460-4a8d-b0df-4cfe701b11d7)
+
