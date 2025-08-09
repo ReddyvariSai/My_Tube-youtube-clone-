@@ -1,0 +1,62 @@
+# My_Tube-youtube-clone-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTube - Educational Video Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="google-tools-bar" style="width:100%;background:orange;padding:6px 0;display:flex;justify-content:center;align-items:center;gap:18px;box-shadow:0 2px 8px #e3eafc;">
+        <!-- Google tools will be rendered by JS -->
+    </div>
+    <div id="advanced-web-tools-bar" style="width:100%;background:#222;padding:6px 0;display:flex;justify-content:center;align-items:center;gap:18px;box-shadow:0 2px 8px #e3eafc;">
+        <!-- Advanced web tools will be rendered by JS -->
+    </div>
+    <div id="splash-screen">
+        <div class="splash-content">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Student" class="splash-img">
+            <h1>MyTube</h1>
+        </div>
+    </div>
+    <header>
+        <div class="logo">MyTube</div>
+        <input type="text" class="search-bar" placeholder="Search educational videos">
+        <button class="search-btn">🔍</button>
+        <div class="auth-buttons">
+            <button id="login-btn">Login</button>
+            <button id="signup-btn">Sign Up</button>
+            <span id="user-count"></span>
+        </div>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <ul>
+                <li id="home-tab">Home</li>
+                <li id="edu-tab">Education Only</li>
+            </ul>
+        </aside>
+        <section class="videos" id="videos-section">
+            <!-- Videos will be rendered by JS -->
+        </section>
+        <aside id="history-section" class="history-section">
+            <!-- History will be rendered here by JS -->
+        </aside>
+    </main>
+    <div id="auth-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h2 id="modal-title">Sign Up</h2>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Username" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+                <button type="submit" id="submit-auth">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
