@@ -1,1 +1,146 @@
-
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6fa;
+}
+#splash-screen {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: #1976d2;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.6s;
+}
+.splash-content {
+    display: flex; flex-direction: column; align-items: center;
+}
+.splash-img {
+    width: 90px; height: 90px; border-radius: 50%; background: #fff;
+    box-shadow: 0 2px 12px #1976d2; margin-bottom: 18px;
+}
+#splash-screen h1 {
+    color: #fff; font-size: 2.5rem; font-weight: bold; letter-spacing: 2px;
+}
+#google-tools-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 102;
+    background: orange;
+    padding: 6px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 2px 8px #e3eafc;
+}
+#advanced-web-tools-bar {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    width: 100vw;
+    z-index: 101;
+    background: #222;
+    padding: 6px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 2px 8px #e3eafc;
+}
+header {
+    display: flex; align-items: center; padding: 18px 32px; background: #fff;
+    box-shadow: 0 2px 8px #e3eafc; 
+    position: fixed;
+    top: 88px; /* below both bars (44px each) */
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+}
+.logo {
+    font-size: 2rem; font-weight: bold; color: #1976d2; letter-spacing: 2px;
+    margin-right: 32px;
+}
+.search-bar {
+    flex: 1; padding: 8px 16px; border-radius: 6px; border: 1px solid #b3c6f7;
+    font-size: 1rem; margin-right: 8px;
+}
+.search-btn {
+    background: #1976d2; color: #fff; border: none; border-radius: 6px;
+    padding: 8px 18px; font-size: 1rem; cursor: pointer; margin-right: 24px;
+    transition: background 0.2s;
+}
+.search-btn:hover { background: #1251a3; }
+.auth-buttons button {
+    background: #fff; color: #1976d2; border: 1px solid #1976d2;
+    border-radius: 6px; padding: 6px 16px; font-size: 1rem; cursor: pointer;
+    margin-left: 8px; transition: background 0.2s, color 0.2s;
+}
+.auth-buttons button:hover {
+    background: #1976d2; color: #fff;
+}
+main {
+    display: flex;
+    margin-top: 178px; /* 44+44+90px header height */
+}
+.sidebar {
+    width: 180px; background: #fff; box-shadow: 0 2px 8px #e3eafc;
+    border-radius: 12px; margin-left: 32px; padding: 18px 0;
+    height: fit-content;
+}
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar li {
+    padding: 12px 24px; font-size: 1.1rem; color: #1976d2; cursor: pointer;
+    border-radius: 6px; margin-bottom: 8px; transition: background 0.2s;
+}
+.sidebar li:hover { background: #e3eafc; }
+.videos {
+    flex: 1; display: flex; flex-wrap: wrap; gap: 24px;
+    padding: 0 32px;
+}
+.video-card {
+    background: #fff; border-radius: 14px; box-shadow: 0 2px 12px #e3eafc;
+    margin: 18px 0; padding: 18px 18px 12px 18px;
+    display: flex; flex-direction: column; align-items: flex-start;
+    transition: box-shadow 0.2s; position: relative; width: 320px;
+}
+.video-card:hover { box-shadow: 0 4px 24px #b3c6f7; }
+.video-thumb {
+    width: 100%; max-width: 340px; border-radius: 10px; margin-bottom: 12px;
+    object-fit: cover; background: #e3eafc;
+}
+.video-title {
+    font-size: 1.2rem; font-weight: bold; color: #1976d2; margin-bottom: 6px;
+}
+.video-desc {
+    font-size: 1rem; color: #444; margin-bottom: 10px;
+}
+.download-btn {
+    background: #1976d2; color: #fff; border: none; border-radius: 6px;
+    padding: 6px 16px; font-size: 1rem; cursor: pointer; margin-top: 6px;
+    transition: background 0.2s;
+}
+.download-btn:hover { background: #1251a3; }
+.history-section {
+    width: 260px; background: #fff; box-shadow: 0 2px 8px #e3eafc;
+    border-radius: 12px; margin-right: 32px; padding: 18px 18px 12px 18px;
+    height: fit-content;
+}
+.modal {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;
+    z-index: 10000;
+}
+.modal-content {
+    background: #fff; border-radius: 12px; padding: 32px 40px; box-shadow: 0 2px 12px #b3c6f7;
+    position: relative;
+}
+.close-modal {
+    position: absolute; top: 12px; right: 18px; font-size: 2rem; color: #1976d2; cursor: pointer;
+}
+@media (max-width: 900px) {
+    main { flex-direction: column; }
+    .sidebar, .history-section { width: 100%; margin: 0 0 18px 0; }
+    .videos { padding: 0 8px; }
+}
