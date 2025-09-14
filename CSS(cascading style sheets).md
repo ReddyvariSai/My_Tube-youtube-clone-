@@ -1,3 +1,5 @@
+
+```bash
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -144,3 +146,4 @@ main {
     .sidebar, .history-section { width: 100%; margin: 0 0 18px 0; }
     .videos { padding: 0 8px; }
 }
+```
