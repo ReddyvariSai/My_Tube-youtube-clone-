@@ -1,3 +1,5 @@
+```bash
+
 // Splash screen logic
 window.addEventListener('DOMContentLoaded', function() {
     const splash = document.getElementById('splash-screen');
@@ -539,3 +541,5 @@ function changeGradientBg() {
 }
 setInterval(changeGradientBg, 10000);
 window.addEventListener('DOMContentLoaded', changeGradientBg);
+
+```
